@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="build/css/vendor.css">
+    <script src="build/js/vendor.min.js"></script>
+    <script type="text/javascript" src="build/js/app.js"></script>
+    <title>sudoku</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <form id="selection-form">
+        <h2>Select a puzzle!</h2>
+        <select>
+          <option value="1">Puzzle 1</option>
+          <option value="2">Puzzle 2</option>
+        </select>
+        <button type="submit">Show puzzle!</button>
+      </form>
+      <form id="sudoku-form">
+        <div class="row">
+          <input class="grid-form" type="number" name="1a" id="1a" placeholder="1" value="1" disabled>
+          <input class="grid-form" type="number" name="1b" id="1b" placeholder="5" value="5" disabled>
+          <input class="grid-form" type="number" name="1c" id="1c" placeholder="2" value="2" disabled>
+          <input class="grid-form" type="number" name="1d" id="1d" placeholder="4" value="4" disabled>
+          <input class="grid-form" type="number" name="1e" id="1e" placeholder="8" value="8" disabled>
+          <input class="grid-form" type="number" name="1f" id="1f" placeholder="9" value="9" disabled>
+          <input class="grid-form" type="number" name="1g" id="1g" placeholder="3" value="3" disabled>
+          <input class="grid-form" type="number" name="1h" id="1h" placeholder="7" value="7" disabled>
+          <input class="grid-form" type="number" name="1i" id="1i" placeholder="6" value="6" disabled>
+        </div>
+        <div class="row">
+          <input class="grid-form" type="number" name="2a" id="2a" placeholder="7" value="7" disabled>
+          <input class="grid-form" type="number" name="2b" id="2b" placeholder="3" value="3" disabled>
+          <input class="grid-form" type="number" name="2c" id="2c" placeholder="9" value="9" disabled>
+          <input class="grid-form" type="number" name="2d" id="2d" placeholder="2" value="2" disabled>
+          <input class="grid-form" type="number" name="2e" id="2e" placeholder="5" value="5" disabled>
+          <input class="grid-form" type="number" name="2f" id="2f" placeholder="6" value="6" disabled>
+          <input class="grid-form" type="number" name="2g" id="2g" placeholder="8" value="8" disabled>
+          <input class="grid-form" type="number" name="2h" id="2h" placeholder="4" value="4" disabled>
+          <input class="grid-form" type="number" name="2i" id="2i" placeholder="1" value="1" disabled>
+        </div>
+        <div class="row">
+          <input class="grid-form" type="number" name="3a" id="3a" placeholder="4" value="4" disabled>
+          <input class="grid-form" type="number" name="3b" id="3b" placeholder="6" value="6" disabled>
+          <input class="grid-form" type="number" name="3c" id="3c" placeholder="8" value="8" disabled>
+          <input class="grid-form" type="number" name="3d" id="3d" placeholder="3" value="3" disabled>
+          <input class="grid-form" type="number" name="3e" id="3e" placeholder="7" value="7" disabled>
+          <input class="grid-form" type="number" name="3f" id="3f" placeholder="1" value="1" disabled>
+          <input class="grid-form" type="number" name="3g" id="3g" placeholder="2" value="2" disabled>
+          <input class="grid-form" type="number" name="3h" id="3h" placeholder="9" value="9" disabled>
+          <input class="grid-form" type="number" name="3i" id="3i" placeholder="5" value="5" disabled>
+        </div>
+        <div class="row">
+          <input class="grid-form" type="number" name="4a" id="4a" placeholder="3" value="3" disabled>
+          <input class="grid-form" type="number" name="4b" id="4b" placeholder="8" value="8" disabled>
+          <input class="grid-form" type="number" name="4c" id="4c" placeholder="7" value="7" disabled>
+          <input class="grid-form" type="number" name="4d" id="4d" placeholder="1" value="1" disabled>
+          <input class="grid-form" type="number" name="4e" id="4e" placeholder="2" value="2" disabled>
+          <input class="grid-form" type="number" name="4f" id="4f" placeholder="4" value="4" disabled>
+          <input class="grid-form" type="number" name="4g" id="4g" placeholder="6" value="6" disabled>
+          <input class="grid-form" type="number" name="4h" id="4h" placeholder="5" value="5" disabled>
+          <input class="grid-form" type="number" name="4i" id="4i" placeholder="9" value="9" disabled>
+        </div>
+        <div class="row">
+          <input class="grid-form" type="number" name="5a" id="5a" placeholder="5" value="5" disabled>
+          <input class="grid-form" type="number" name="5b" id="5b" placeholder="9" value="9" disabled>
+          <input class="grid-form" type="number" name="5c" id="5c" placeholder="1" value="1" disabled>
+          <input class="grid-form" type="number" name="5d" id="5d" placeholder="7" value="7" disabled>
+          <input class="grid-form" type="number" name="5e" id="5e" placeholder="6" value="6" disabled>
+          <input class="grid-form" type="number" name="5f" id="5f" placeholder="3" value="3" disabled>
+          <input class="grid-form" type="number" name="5g" id="5g" placeholder="4" value="4" disabled>
+          <input class="grid-form" type="number" name="5h" id="5h" placeholder="2" value="2" disabled>
+          <input class="grid-form" type="number" name="5i" id="5i" placeholder="8" value="8" disabled>
+        </div>
+        <div class="row">
+          <input class="grid-form" type="number" name="6a" id="6a" placeholder="2" value="2" disabled>
+          <input class="grid-form" type="number" name="6b" id="6b" placeholder="4" value="4" disabled>
+          <input class="grid-form" type="number" name="6c" id="6c" placeholder="6" value="6" disabled>
+          <input class="grid-form" type="number" name="6d" id="6d" placeholder="8" value="8" disabled>
+          <input class="grid-form" type="number" name="6e" id="6e" placeholder="9" value="9" disabled>
+          <input class="grid-form" type="number" name="6f" id="6f" placeholder="5" value="5" disabled>
+          <input class="grid-form" type="number" name="6g" id="6g" placeholder="7" value="7" disabled>
+          <input class="grid-form" type="number" name="6h" id="6h" placeholder="1" value="1" disabled>
+          <input class="grid-form" type="number" name="6i" id="6i" placeholder="3" value="3" disabled>
+        </div>
+        <div class="row">
+          <input class="grid-form" type="number" name="7a" id="7a" placeholder="9" value="9" disabled>
+          <input class="grid-form" type="number" name="7b" id="7b" placeholder="1" value="1" disabled>
+          <input class="grid-form" type="number" name="7c" id="7c" placeholder="4" value="4" disabled>
+          <input class="grid-form" type="number" name="7d" id="7d" placeholder="6" value="6" disabled>
+          <input class="grid-form" type="number" name="7e" id="7e" placeholder="3" value="3" disabled>
+          <input class="grid-form" type="number" name="7f" id="7f" placeholder="7" value="7" disabled>
+          <input class="grid-form" type="number" name="7g" id="7g" placeholder="5" value="5" disabled>
+          <input class="grid-form" type="number" name="7h" id="7h" placeholder="8" value="8" disabled>
+          <input class="grid-form" type="number" name="7i" id="7i" placeholder="2" value="2" disabled>
+        </div>
+        <div class="row">
+          <input class="grid-form" type="number" name="8a" id="8a" placeholder="6" value="6" disabled>
+          <input class="grid-form" type="number" name="8b" id="8b" placeholder="2" value="2" disabled>
+          <input class="grid-form" type="number" name="8c" id="8c" placeholder="5" value="5" disabled>
+          <input class="grid-form" type="number" name="8d" id="8d" placeholder="9" value="9" disabled>
+          <input class="grid-form" type="number" name="8e" id="8e" placeholder="4" value="4" disabled>
+          <input class="grid-form" type="number" name="8f" id="8f" placeholder="8" value="8" disabled>
+          <input class="grid-form" type="number" name="8g" id="8g" placeholder="1" value="1" disabled>
+          <input class="grid-form" type="number" name="8h" id="8h" placeholder="3" value="3" disabled>
+          <input class="grid-form" type="number" name="8i" id="8i" placeholder="7" value="7" disabled>
+        </div>
+        <div class="row">
+          <input class="grid-form" type="number" name="9a" id="9a" placeholder="8" value="8" disabled>
+          <input class="grid-form" type="number" name="9b" id="9b" placeholder="7" value="7" disabled>
+          <input class="grid-form" type="number" name="9c" id="9c" placeholder="3" value="3" disabled>
+          <input class="grid-form" type="number" name="9d" id="9d" placeholder="5" value="5" disabled>
+          <input class="grid-form" type="number" name="9e" id="9e" placeholder="1" value="1" disabled>
+          <input class="grid-form" type="number" name="9f" id="9f" placeholder="2" value="2" disabled>
+          <input class="grid-form" type="number" name="9g" id="9g" placeholder="9" value="9" disabled>
+          <input class="grid-form" type="number" name="9h" id="9h" placeholder="6" value="6" disabled>
+          <input class="grid-form" type="number" name="9i" id="9i" placeholder="4" value="4" disabled>
+        </div>
+        <div class="row">
+          <button type="submit">Check!</button>
+        </div>
+      </form>
+      <form id="test">
+        <button type="submit">Test</button>
+      </form>
+      <div id="result">
+      </div>
+    </div>
+  </body>
+</html>
