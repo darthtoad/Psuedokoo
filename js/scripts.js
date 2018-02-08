@@ -13,29 +13,29 @@ export class Sudoku {
     this.bigArray = [row1, row2, row3, row4, row5, row6, row7, row8, row9];
   }
 
-//  var x = 0;
+//  let x = 0;
 
   check() {
-    var block1 = [];
-    var block2 = [];
-    var block3 = [];
-    var block4 = [];
-    var block5 = [];
-    var block6 = [];
-    var block7 = [];
-    var block8 = [];
-    var block9 = [];
-    var col1 = [];
-    var col2 = [];
-    var col3 = [];
-    var col4 = [];
-    var col5 = [];
-    var col6 = [];
-    var col7 = [];
-    var col8 = [];
-    var col9 = [];
-    var i = 0;
-    var boolean = true;
+    let block1 = [];
+    let block2 = [];
+    let block3 = [];
+    let block4 = [];
+    let block5 = [];
+    let block6 = [];
+    let block7 = [];
+    let block8 = [];
+    let block9 = [];
+    let col1 = [];
+    let col2 = [];
+    let col3 = [];
+    let col4 = [];
+    let col5 = [];
+    let col6 = [];
+    let col7 = [];
+    let col8 = [];
+    let col9 = [];
+    let i = 0;
+    let boolean = true;
 
     this.bigArray.forEach(function(arrayThis){
       i++;
@@ -44,7 +44,7 @@ export class Sudoku {
       } else if ((new Set(arrayThis)).size !== arrayThis.length) {
         boolean = false;
       } else {
-        var j = 0;
+        let j = 0;
         arrayThis.forEach(function(num){
           // debugger;
           j++;
@@ -169,9 +169,9 @@ export class Sudoku {
             boolean = true;
             alert("success");
           }
-        })
+        });
       }
-    })
+    });
     return boolean;
-  };
+  }
 }
