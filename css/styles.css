@@ -1,3 +1,11 @@
 h2 {
   color: green;
 }
+
+body {
+  background-color: yellow;
+}
+
+input {
+  width: 30px;
+}

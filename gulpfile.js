@@ -34,24 +34,24 @@ gulp.task('bowerCSS', function () {
     .pipe(gulp.dest('./build/css'));
 });
 
-gulp.task("cssBuild", function() {
+gulp.task('cssBuild', function() {
   gulp.src(['css/*.css'])
   .pipe(concat('vendor.css'))
   .pipe(gulp.dest('./build/css'))
 });
 
-gulp.task('bower', ['bowerJS', 'bowerCSS']);
+gulp.task('bower', ['bowerJS','cssBuild']);
 
-gulp.task("minifyScripts", ["jsBrowserify"], function(){
-  return gulp.src("./build/js/app.js")
+gulp.task('minifyScripts', ['jsBrowserify'], function(){
+  return gulp.src('./build/js/app.js')
     .pipe(uglify())
-    .pipe(gulp.dest("./build/js"));
+    .pipe(gulp.dest('./build/js'));
 });
 
-gulp.task('jsBrowserify', ['concatInterface', "cssBuild"], function() {
+gulp.task('jsBrowserify', ['concatInterface','bower'], function() {
   return browserify({ entries: ['./tmp/allConcat.js'] })
     .transform(babelify.configure({
-      presets: ["es2015"]
+      presets: ['es2015']
     }))
     .bundle()
     .pipe(source('app.js'))
@@ -67,8 +67,8 @@ gulp.task('concatInterface', function() {
 gulp.task('serve', function() {
   browserSync.init({
     server: {
-      baseDir: "./",
-      index: "index.html"
+      baseDir: './',
+      index: 'index.html'
     }
   });
   gulp.watch(['css/*.css'], ['cssWatch'])
@@ -88,7 +88,7 @@ gulp.task('cssWatch', ['cssBuild'], function(){
   browserSync.reload();
 })
 
-gulp.task("clean", function(){
+gulp.task('clean', function(){
   return del(['build', 'tmp']);
 });
 
@@ -98,8 +98,8 @@ gulp.task('jshint', function(){
     .pipe(jshint.reporter('default'));
 });
 
-gulp.task("build", ['clean'], function(){
-  gulp.start('bower');
+gulp.task('build', ['clean'], function(){
+  // gulp.start('bower');
   if (buildProduction) {
     gulp.start('minifyScripts');
   } else {
