@@ -1,5 +1,5 @@
 # Psuedokoo
-#### Sudoku checker web app made with Angular 2
+#### Sudoku checker web app made with jQuery
 
 #### By _**Sam Gespass and Danyel Murray**_
 
@@ -24,6 +24,7 @@ _This app allows a user to check if a sudoku is correct. It also offers a few pr
 * Run bower install in the terminal
 * Run gulp build in the terminal
 * Finally, run gulp serve in the terminal. A browser window should open in localhost:3000.
+
 ## Known Bugs
 
 _There are no known bugs. If you find any, please [message](mailto:darth.toad@gmail.com) me._
