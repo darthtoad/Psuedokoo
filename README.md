@@ -39,8 +39,6 @@ _There are no known bugs. If you find any, please [message](mailto:darth.toad@gm
 * _Bower_
 * _Git_
 * _GitHub_
-* _Angular_
-* _Typescript_
 
 ### License
 
